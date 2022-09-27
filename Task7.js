@@ -4,6 +4,10 @@ true, если строка является палиндромом, или fals
 const string = 'tenet';
 
 const checkPolyndrom = (str) => {
+  if (str.length < 2) {
+    return "error";
+  }
+  
   str = str.toLowerCase().split(' ').join('');
   let flag = true;
 
