@@ -14,19 +14,17 @@ const lengthStr = (str) => {
 const firstString = 'text education part 2';
 const secondString = 'text education';
 
-const printRest = (strFirst, strSecond) => {
+const compareString = (strFirst, strSecond) => {
   const num = lengthStr(strFirst) - lengthStr(strSecond);
-  let strResult = '';
 
   if (num > 0) {
-    strResult = strFirst.slice(lengthStr(strSecond));
-  } else if (num < 0) {
-    strResult = strSecond.slice(lengthStr(strFirst));
-  } else {
-    strResult = 'Длины строк одинаковы';
+    return strFirst.slice(lengthStr(strSecond));
+  } 
+  if (num < 0) {
+    return strSecond.slice(lengthStr(strFirst));
   }
 
-  return strResult;
+  return 'Длины строк одинаковы';
 }
 
-printRest(firstString, secondString);
+compareString(firstString, secondString);
