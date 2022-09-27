@@ -9,7 +9,9 @@ const arrayThird = [6, 3, 2, 8, 1];
 const findNumber = (...arrays) => {
   if (arrays.length < 1) {
     return 'error';
-  } else if (arrays.length < 2) {
+  } 
+  
+  if (arrays.length < 2) {
     return arrays[0];
   } 
 
@@ -28,11 +30,15 @@ const findNumber = (...arrays) => {
       }
     });
 
-    if(count === arrays.length) {
+    if (count === arrays.length) {
       resultArray.push(element);
     }
   });
 
+  if (!resultArray[0]) {
+    resultArray = 'Совпадений нет';
+  }
+  
   return resultArray;
 }
 
