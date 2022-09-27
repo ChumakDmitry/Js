@@ -3,7 +3,7 @@ console.log(`Напишите функцию range(), принимающую д�
 включая начальное и конечное. Третий необязательный аргумент функции range() – 
 шаг для построения массива. Убедитесь, что функция range() работает с отрицательным шагом.`);
 
-const range = (start, end, step) => {
+const range = (start, end, step = 1) => {
   if ((step > 0 && start > end) || (step < 0 && start < end)) {
     return 'Error, check data';
   }
@@ -12,13 +12,10 @@ const range = (start, end, step) => {
   let flag = true;
   const buff = start;
 
-  if (!step) {
-    step = 1;
-    if (start > end) {
-      start = end;
-      end = buff;
-      flag = false;
-    }
+  if (start > end) {
+    start = end;
+    end = buff;
+    flag = false;
   }
 
   if (step < 0) {
