@@ -3,12 +3,21 @@ true, если строка является палиндромом, или fals
 
 const string = 'tenet';
 
-const checkPolyndrom = (str) => {
+const checkPalyndrome = (str) => {
   if (str.length < 2) {
     return "error";
   }
-  
-  str = str.toLowerCase().split(' ').join('');
+
+  str = str.toLowerCase().split('');
+
+  for (let i = 0 ; i < str.length; i++) {
+    if (str[i] === ',' || str[i] === '-' || str[i] === '.' || str[i] === ' ') {
+      str.splice(i, 1);
+      i--;
+    }
+  }
+
+  str = str.join('');
   let flag = true;
 
   for (let i = 0, j = str.length - 1; i < str.length / 2; i++, j--) {
@@ -20,4 +29,4 @@ const checkPolyndrom = (str) => {
   return flag;
 }
 
-checkPolyndrom(string);
+checkPalyndrome(string);
