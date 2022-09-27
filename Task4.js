@@ -5,7 +5,7 @@ console.log(`Напишите функцию range(), принимающую д�
 
 const range = (start, end, step) => {
   if ((step > 0 && start > end) || (step < 0 && start < end)) {
-    return 'Error';
+    return 'Error, check data';
   }
 
   const resultArray = [];
