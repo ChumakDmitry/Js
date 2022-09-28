@@ -5,19 +5,18 @@ console.log(`Дана строка. Разделите строку на фра�
 const string = "test education part 211";
 
 const fragmentationString = (str) => {
-  const arraySplit = str.split('');
   let buff = [];
   let resultArray = [];
 
-  for (let i = 0; i < arraySplit.length; i++) {
-    buff.push(arraySplit[i]);
+  for (let i = 0; i < str.length; i++) {
+    buff.push(str[i]);
 
     if ((i + 1) % 3 === 0) {
       buff[1] = '_';
       resultArray.push(buff.join(''));
       buff = [];
     }
-    if (i === arraySplit.length - 1 && buff.length > 0) {
+    if (i === str.length - 1 && buff.length > 0) {
       if (buff[1]) {
         buff[1] = '_';
       }
@@ -35,7 +34,7 @@ const fragmentationString = (str) => {
     }
   }
 
-  console.log(resultArray);
+  return resultArray;
 }
 
 fragmentationString(string);
