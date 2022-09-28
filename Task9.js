@@ -24,7 +24,7 @@ const firstValue = "RF";
 const secondValue = 18;
 
 const findObjects = (arr, valueFirst, valueSecond) => {
-  let resultArray = [];
+  const resultArray = [];
 
   arr.forEach(element => {
     let count = 0;
