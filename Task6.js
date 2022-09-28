@@ -3,13 +3,13 @@ console.log(`Напишите функцию, которая четное чис
 находит корень от получившегося результата, округленный до сотых. Но за счет того, что функция вызывает функцию.`);
 
 const round = (number) => {
-  let str = `${number}`;
-  let index = 0;
+  const str = `${number}`;
+  let result;
 
   for (let i = 0; i < str.length; i++) {
     if (str[i] === '.') {
-      str = Number(str.slice(0, i + 3));
-      return str;
+      result = Number(str.slice(0, i + 3));
+      return result;
     }
   }
 
