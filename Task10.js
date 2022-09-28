@@ -7,21 +7,22 @@ const compareArray = (arrayFirst, arraySecond) => {
   if (arrayFirst.length === 0) {
     return "error";
   }
+  const arrayResult = [...arrayFirst];
 
   arraySecond.forEach(element => {
-    for (let i = 0; i < arrayFirst.length; i++) {
-      if (arrayFirst[i] === element) {
-        arrayFirst.splice(i, 1); 
+    for (let i = 0; i < arrayResult.length; i++) {
+      if (arrayResult[i] === element) {
+        arrayResult.splice(i, 1); 
         i--;
       }
     }
   });
 
-  if (arrayFirst.length === 0) {
+  if (arrayResult.length === 0) {
     return 'No unique element';
   }
 
-  return arrayFirst;
+  return arrayResult;
 }
 
 const firstArray = [4, 7, 2, 9, 3, 5, 6, 4, 5, 1, 4];
