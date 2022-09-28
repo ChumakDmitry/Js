@@ -21,11 +21,7 @@ const calcNumber = (x) => {
     return "error";
   }
 
-  if (x % 2 === 0) {
-    x = x ** 2;
-  } else {
-    x = x ** 3;
-  }
+  x % 2 === 0 ? x = x ** 2 : x = x ** 3;
 
   return multiplicateNumber = (y = 0) => {
     x *= y;
