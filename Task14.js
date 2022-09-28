@@ -1,30 +1,35 @@
 console.log(`Даны две строки. Напишите функцию, которая определит, содержится ли меньшая по длине строка в большей.`);
 
 const checkIncludeds = (stringHead, string) => {
-  if (stringHead.length < 1 || string.length < 1 || stringHead.length < string.length) {
+  if (stringHead.length < 1 || string.length < 1) {
     return "Error";
   }
 
-  string = string.toLowerCase();
-  stringHead = stringHead.toLowerCase();
+  let stringLowerCase = string.toLowerCase();
+  let stringHeadLowerCase = stringHead.toLowerCase();
 
-  for (let i = 0; i < stringHead.length; i++) {
+  if (stringLowerCase > stringHeadLowerCase) {
+    const temp = stringLowerCase;
+    stringLowerCase = stringHeadLowerCase;
+    stringHeadLowerCase = temp;
+  }
+
+  for (let i = 0; i < stringHeadLowerCase.length; i++) {
     let count = 0;
 
-    for (let j = 0; j < string.length; j++) {
-      if (stringHead[i + j] !== string[j]) {
+    for (let j = 0; j < stringLowerCase.length; j++) {
+      if (stringHeadLowerCase[i + j] !== stringLowerCase[j]) {
         break;
       }
-      
       count++;
     }
 
-    if (count === string.length) {
-      return ('true');
+    if (count === stringLowerCase.length) {
+      return 'true';
     }
   }
 
-  return ('false');
+  return 'false';
 }
 
 const headString = "text education part 2";
