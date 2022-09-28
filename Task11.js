@@ -5,10 +5,10 @@ const printFiltredUniqueArray = (arr) => {
     return "error"
   }
 
-  for(let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     let count = 0;
     
-    for(let j = i + 1; j < arr.length; j++) {
+    for (let j = i + 1; j < arr.length; j++) {
       if (arr[i] === arr[j]) {
         arr.splice(j, 1);
         j--;
