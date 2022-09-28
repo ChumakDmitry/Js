@@ -4,7 +4,7 @@ console.log(`Напишите функцию, которая четное чис
 
 const round = (number) => {
   const str = `${number}`;
-  let result;
+  let result = null;
 
   for (let i = 0; i < str.length; i++) {
     if (str[i] === '.') {
@@ -12,15 +12,12 @@ const round = (number) => {
       return result;
     }
   }
-
-
 }
 
 const calcNumber = (x) => {
   if (x === 0) {
     return "error";
   }
-
   x % 2 === 0 ? x = x ** 2 : x = x ** 3;
 
   return multiplicateNumber = (y = 0) => {
