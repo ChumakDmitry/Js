@@ -17,6 +17,10 @@ const compareArray = (arrayFirst, arraySecond) => {
     }
   });
 
+  if (arrayFirst.length === 0) {
+    return 'No unique element';
+  }
+
   return arrayFirst;
 }
 
