@@ -7,7 +7,6 @@ const checkPalyndrome = (str) => {
   if (str.length < 2) {
     return "error";
   }
-
   let resultString = str.toLowerCase();
 
   for (let i = 0 ; i < resultString.length; i++) {
